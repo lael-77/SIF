@@ -9,7 +9,7 @@ import {
   MessageCircle,
   ArrowRight
 } from "lucide-react";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 const joinTypes = [
   {
@@ -22,7 +22,7 @@ const joinTypes = [
     id: "school",
     icon: Building,
     title: "Schools",
-    description: "Educational institutions looking to bring SVA programs to their students.",
+    description: "Educational institutions looking to bring SIF programs to their students.",
   },
   {
     id: "mentor",
@@ -48,10 +48,41 @@ const Join = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log({ type: selectedType, ...formData });
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      alert("Missing Web3Forms access key. Set VITE_WEB3FORMS_ACCESS_KEY in your environment.");
+      return;
+    }
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        subject: `SIF Website — Join Form — ${selectedType ?? "general"}`,
+        email: formData.email,
+        category: selectedType ?? "general",
+        name: formData.name,
+        phone: formData.phone,
+        country: formData.country,
+        message: formData.message,
+      }),
+    });
+
+    const data = await res.json().catch(() => null);
+
+    if (res.ok && data?.success) {
+      window.location.reload();
+      return;
+    }
+
+    alert(data?.message || "Submission failed. Please try again.");
   };
 
   return (
@@ -67,7 +98,7 @@ const Join = () => {
               <span className="gradient-text">Movement</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Whether you're a student, educator, mentor, or organization — there's a place for you in SVA's mission to engineer Africa's future.
+              Whether you're a student, educator, mentor, or organization — there's a place for you in SIF's mission to engineer Africa's future.
             </p>
           </div>
         </div>
@@ -144,7 +175,7 @@ const Join = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                    placeholder="your@email.com"
+                    placeholder="Email Address"
                     required
                   />
                 </div>
@@ -160,7 +191,7 @@ const Join = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                    placeholder="+250..."
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div>
@@ -172,7 +203,7 @@ const Join = () => {
                     value={formData.country}
                     onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-                    placeholder="Rwanda, Uganda, etc."
+                    placeholder="Country"
                     required
                   />
                 </div>
@@ -187,11 +218,11 @@ const Join = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-                  placeholder="Why do you want to join SVA? What excites you about engineering the future?"
+                  placeholder="Why do you want to join SIF? What excites you about engineering the future?"
                 />
               </div>
 
-              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!selectedType}>
+              <Button type="submit" variant="hero" size="lg" className="w-full">
                 Submit Application
                 <ArrowRight size={18} />
               </Button>
@@ -214,11 +245,11 @@ const Join = () => {
             <Button asChild variant="glass" size="lg">
               <a href="mailto:hello@sva.africa">
                 <Mail size={18} />
-                hello@sva.africa
+                info@siliconvalleyafrica.org
               </a>
             </Button>
             <Button asChild variant="glass" size="lg">
-              <a href="https://wa.me/250780000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/250792390983" target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={18} />
                 WhatsApp Us
               </a>

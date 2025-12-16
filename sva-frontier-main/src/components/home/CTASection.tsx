@@ -14,7 +14,7 @@ export function CTASection() {
             {/* Text + CTA */}
             <div className="text-center lg:text-left">
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                SVA is the new{" "}
+                SIF is the new{" "}
                 <span className="gradient-text">frontier.</span>
               </h2>
 
@@ -43,7 +43,7 @@ export function CTASection() {
               <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-xl">
                 <img
                   src="/images/sva-frontier.jpg"
-                  alt="SVA students and frontier technology"
+                  alt="SIF students and frontier technology"
                   className="w-full h-72 sm:h-80 md:h-[24rem] lg:h-[26rem] object-cover"
                 />
               </div>

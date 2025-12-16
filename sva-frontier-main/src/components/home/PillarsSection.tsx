@@ -20,7 +20,7 @@ const pillars = [
   },
   {
     icon: FlaskConical,
-    title: "SVA Labs",
+    title: "SIF Labs",
     subtitle: "Research & Innovation",
     description: "Where breakthrough ideas become reality. Frontier Lab, Future Institute, and Studios working on planetary-scale challenges.",
     color: "gold",
@@ -85,10 +85,10 @@ export function PillarsSection() {
                       alt="NDL icon"
                       className="w-full h-full object-contain"
                     />
-                  ) : pillar.title === 'SVA Labs' ? (
+                  ) : pillar.title === 'SIF Labs' ? (
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/8711/8711362.png"
-                      alt="SVA Labs icon"
+                      alt="SIF Labs icon"
                       className="w-full h-full object-contain"
                     />
                   ) : (

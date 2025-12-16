@@ -19,18 +19,17 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between h-28">
           {/* Logo */}
           <Link 
             to="/" 
             className="flex items-center gap-2 group"
           >
-            <div className="relative">
-              <span className="font-display text-2xl font-bold tracking-tight text-slate-900 group-hover:text-glow transition-all duration-300">
-                SVA
-              </span>
-              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            </div>
+            <img
+              src="/sif-logo.png"
+              alt="SIF logo"
+              className="h-24 sm:h-28 md:h-32 w-auto drop-shadow-sm group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,7 +53,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild variant="hero" size="sm">
-              <Link to="/join">Join SVA</Link>
+              <Link to="/join">Join SIF</Link>
             </Button>
           </div>
 
@@ -94,7 +93,7 @@ export function Header() {
           ))}
           <div className="pt-4">
             <Button asChild variant="hero" className="w-full">
-              <Link to="/join" onClick={() => setIsOpen(false)}>Join SVA</Link>
+              <Link to="/join" onClick={() => setIsOpen(false)}>Join SIF</Link>
             </Button>
           </div>
         </div>

@@ -41,7 +41,7 @@ export function HeroSection() {
         </h1>
 
         {/* Subtext */}
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 animate-fade-in-up delay-200">
+        <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-6 animate-fade-in-up delay-200">
           A youth-led movement shaping civilization-scale solutions through deep technology, systems thinking, and planetary engineering.
         </p>
 

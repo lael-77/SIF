@@ -25,7 +25,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border bg-white">
+    <footer className="relative border-t border-border bg-slate-50">
       {/* Gradient line at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent" />
       
@@ -33,13 +33,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-slate-800">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-block">
-              <span className="font-display text-3xl font-bold tracking-tight text-slate-900">
-                SVA
-              </span>
+            <Link to="/" className="inline-flex items-center gap-2">
+              <img
+                src="/sif-logo.png"
+                alt="SIF logo"
+                className="h-24 sm:h-28 md:h-32 w-auto drop-shadow-sm"
+              />
             </Link>
             <p className="mt-4 text-slate-600 max-w-md leading-relaxed">
-              Silicon Valley of Africa — A youth-led deep-tech movement engineering the future of the continent.
+              Silicon Institute for the Futures — A youth-led deep-tech movement engineering the future of the continent.
             </p>
             <p className="mt-4 inline-flex items-center justify-center px-5 py-2 rounded-full bg-slate-200 border border-slate-300 font-display text-sm tracking-widest text-neon-purple">
               HUMANS BUILD HUMANITY
@@ -100,9 +102,9 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border bg-white flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-6 lg:px-8 -mx-4 sm:-mx-6 lg:-mx-8">
+        <div className="mt-16 pt-8 border-t border-border bg-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4 px-4 sm:px-6 lg:px-8 -mx-4 sm:-mx-6 lg:-mx-8">
           <p className="text-sm text-slate-700">
-            © {new Date().getFullYear()} Silicon Valley of Africa. All rights reserved.
+            © {new Date().getFullYear()} Silicon Institute for the Futures. All rights reserved.
           </p>
           <p className="text-sm text-slate-700">
             Engineering Africa's Next Century

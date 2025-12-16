@@ -21,10 +21,10 @@ const About = () => {
             <div className="max-w-3xl">
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">
                 About{" "}
-                <span className="gradient-text">SVA</span>
+                <span className="gradient-text">SIF</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                The Silicon Valley of Africa (SVA) empowers students to tackle civilization-scale challenges. Through advanced programs, labs, and creative studios, we train thinkers and builders who design transformative technologies, craft future-ready policies, and shape a knowledge society. Humans Build Humanity.
+                The Silicon Institute for the Futures (SIF) empowers students to tackle civilization-scale challenges. Through advanced programs, labs, and creative studios, we train thinkers and builders who design transformative technologies, craft future-ready policies, and shape a knowledge society. Humans Build Humanity.
               </p>
             </div>
 
@@ -33,7 +33,7 @@ const About = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-xl">
                 <img
                   src="/images/about-hero.jpg"
-                  alt="Students and mentors collaborating at SVA"
+                  alt="Students and mentors collaborating at SIF"
                   className="w-full h-72 sm:h-80 md:h-[22rem] lg:h-[24rem] object-cover"
                 />
               </div>
@@ -91,7 +91,7 @@ const About = () => {
                 <div className="w-12 h-12 overflow-hidden rounded-xl flex-shrink-0">
                   <img
                     src="/images/about-origin-icon.jpg"
-                    alt="SVA origin icon"
+                    alt="SIF origin icon"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -100,13 +100,13 @@ const About = () => {
             </h2>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                SVA was founded in Rwanda to transform the way young Africans learn and innovate. Recognizing that conventional STEM and coding education was no longer enough, our founder, <span className="text-neon-blue font-semibold">Ismael Kaleeba</span>, created a movement to empower students to tackle planetary problems, existential threats, and civilization-scale challenges.
+                The Silicon Institute for the Futures (SIF) was founded in Rwanda to transform the way young Africans learn and innovate. Recognizing that conventional STEM and coding education was no longer enough, our founder, <span className="text-neon-blue font-semibold">Ismael Kaleeba</span>, created a movement to empower students to tackle planetary problems, existential threats, and civilization-scale challenges.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 From a small group of brilliant minds emerged a movement. Students who refused to accept the limitations placed upon them. Young engineers who saw not just problems, but planetary-scale opportunities.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Today, SVA spans Rwanda and Uganda, with a growing community of future engineers, researchers, and innovators — all united by a single belief: <span className="text-neon-purple font-semibold">Humans Build Humanity.</span>
+                Today, SIF spans Rwanda and Uganda, with a growing community of future engineers, researchers, and innovators — all united by a single belief: <span className="text-neon-purple font-semibold">Humans Build Humanity.</span>
               </p>
             </div>
 
@@ -115,7 +115,7 @@ const About = () => {
               <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-xl">
                 <img
                   src="/images/about-origin.jpg"
-                  alt="Early SVA students working together in Rwanda"
+                  alt="Early SIF students working together in Rwanda"
                   className="w-full h-72 sm:h-80 md:h-[22rem] lg:h-[24rem] object-cover"
                 />
               </div>

@@ -33,7 +33,7 @@ export function DifferenceSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            What Makes SVA{" "}
+            What Makes SIF{" "}
             <span className="gradient-text">Different</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -52,8 +52,8 @@ export function DifferenceSection() {
               >
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                   <img
-                    src="https://freesvg.org/img/milker_X_icon.png"
-                    alt="SVA pillar icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOF-nyvAgI91Ga9HnL6YIzIWsUrnegAoo9mg&s"
+                    alt="Not STEM icon"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -75,7 +75,7 @@ export function DifferenceSection() {
             <div className="relative glass-panel bg-white text-slate-900 p-8 md:p-10 lg:p-12 transition-all duration-500 transform group-hover:-translate-y-1 flex flex-col items-center text-center gap-6">
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center shadow-lg shadow-neon-purple/30 overflow-hidden">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/5103/5103095.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-baPh2G6kcHgkA_QNefTYpfjcuPsaXixVhQ&s"
                   alt="Future engineers icon"
                   className="w-full h-full object-contain"
                 />
