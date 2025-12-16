@@ -27,11 +27,9 @@ const Contact = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-    if (!accessKey) {
-      alert("Missing Web3Forms access key. Set VITE_WEB3FORMS_ACCESS_KEY in your environment.");
-      return;
-    }
+    const accessKey =
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+      "c144e41f-36ea-4a60-9895-cc5acdb59767";
 
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
