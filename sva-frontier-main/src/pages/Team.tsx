@@ -35,27 +35,27 @@ type Advisor = {
 const executiveLeadership: Executive[] = [
   {
     name: "Ismael Kaleeba",
-    role: "Founder & Managing Director",
+    role: "Chairman of the Board",
     bio: "Leads the vision for SIF as a continent-scale builder movement for Africa's next century.",
-    photo: "/images/IMG-20250412-WA0006.jpg",
+    photo: "",
   },
   {
     name: "Ineza Liza Gaxine",
     role: "Deputy Managing Director",
     bio: "Transforms long-horizon strategy into operational reality across countries and programs.",
-    photo: "/images/IMG-20250412-WA0010.jpg",
+    photo: "",
   },
   {
     name: "Ishimwe Karamage Yves",
-    role: "Director of Programs",
+    role: "Programs Director",
     bio: "Designs and scales the core initiatives that train future engineers and civilization builders.",
-    photo: "/images/IMG-20250412-WA0012.jpg",
+    photo: "",
   },
   {
     name: "Karangwa Beni Bonheur",
-    role: "Director of Outreach & Public Relations",
+    role: "Managing Director",
     bio: "Tells the SIF story and builds bridges with partners, schools, and communities.",
-    photo: "/images/sva-frontier.jpg",
+    photo: "",
   },
 ];
 
@@ -137,11 +137,13 @@ function ExecutiveCard({ name, role, bio, photo }: Executive) {
   return (
     <div className="glass-panel bg-white text-slate-900 p-8 flex flex-col md:flex-row gap-6 hover-glow transition-all duration-500">
       <div className="w-28 h-28 rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 flex-shrink-0">
-        <img
-          src={photo}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+        {photo ? (
+          <img
+            src={photo}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        ) : null}
       </div>
       <div className="flex-1">
         <h3 className="font-display text-xl font-bold mb-1">{name}</h3>
