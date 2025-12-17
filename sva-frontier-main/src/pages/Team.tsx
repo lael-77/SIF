@@ -37,7 +37,7 @@ const executiveLeadership: Executive[] = [
     name: "Ismael Kaleeba",
     role: "Chairman of the Board",
     bio: "Leads the vision for SIF as a continent-scale builder movement for Africa's next century.",
-    photo: "",
+    photo: "/public/kaleeba.jpeg",
   },
    {
     name: "Karangwa Beni Bonheur",
