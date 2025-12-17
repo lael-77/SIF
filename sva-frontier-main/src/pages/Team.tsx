@@ -39,6 +39,12 @@ const executiveLeadership: Executive[] = [
     bio: "Leads the vision for SIF as a continent-scale builder movement for Africa's next century.",
     photo: "",
   },
+   {
+    name: "Karangwa Beni Bonheur",
+    role: "Managing Director",
+    bio: "Tells the SIF story and builds bridges with partners, schools, and communities.",
+    photo: "",
+  },
   {
     name: "Ineza Liza Gaxine",
     role: "Deputy Managing Director",
@@ -49,12 +55,6 @@ const executiveLeadership: Executive[] = [
     name: "Ishimwe Karamage Yves",
     role: "Programs Director",
     bio: "Designs and scales the core initiatives that train future engineers and civilization builders.",
-    photo: "",
-  },
-  {
-    name: "Karangwa Beni Bonheur",
-    role: "Managing Director",
-    bio: "Tells the SIF story and builds bridges with partners, schools, and communities.",
     photo: "",
   },
 ];
