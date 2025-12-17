@@ -64,6 +64,30 @@ const programs = [
   },
 ];
 
+ const otherPrograms = [
+   {
+     id: "sva",
+     icon: Cpu,
+     title: "SVA",
+     subtitle: "Silicon Valley of Africa",
+     description: "Our silicon level deep tech engineering 30 weeks intensive bootcamp",
+   },
+   {
+     id: "robotics-for-good",
+     icon: Rocket,
+     title: "Robotics for good",
+     subtitle: "In partnership with the ITU",
+     description: "We host the robotics for good youth challenge in Rwanda",
+   },
+   {
+     id: "grow-and-innovate",
+     icon: Sun,
+     title: "Grow and Innovate",
+     subtitle: "Summer bootcamp",
+     description: "Where toddlers jump and innovate, a tech immersion summer camp for ages 6-15",
+   },
+ ];
+
 const labs = [
   {
     id: "frontier",
@@ -230,6 +254,33 @@ const Programs = () => {
                     )}
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 border-t border-border/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Other <span className="gradient-text">Programs</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {otherPrograms.map((program) => (
+              <div
+                key={program.id}
+                id={program.id}
+                className="glass-panel bg-white text-slate-900 p-8 hover-glow transition-all duration-500 scroll-mt-24"
+              >
+                <div className="w-12 h-12 rounded-2xl mb-5 flex items-center justify-center bg-slate-100 border border-slate-200">
+                  <program.icon className="w-6 h-6 text-neon-purple" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">{program.title}</h3>
+                <p className="text-sm font-medium text-neon-blue mb-4">{program.subtitle}</p>
+                <p className="text-slate-600 leading-relaxed">{program.description}</p>
               </div>
             ))}
           </div>

@@ -16,6 +16,12 @@ type ProgramLead = {
   photo: string;
 };
 
+type OtherProgram = {
+  title: string;
+  subtitle?: string;
+  description: string;
+};
+
 type Specialist = {
   name: string;
   title: string;
@@ -33,17 +39,17 @@ type Advisor = {
 };
 
 const executiveLeadership: Executive[] = [
-  {
+   {
     name: "Ismael Kaleeba",
     role: "Chairman of the Board",
     bio: "Leads the vision for SIF as a continent-scale builder movement for Africa's next century.",
-    photo: "sva-frontier-main/public/Kaleeba.jpeg",
+    photo: "/Kaleeba.jpeg",
   },
    {
     name: "Karangwa Beni Bonheur",
     role: "Managing Director",
     bio: "Tells the SIF story and builds bridges with partners, schools, and communities.",
-    photo: "",
+    photo: "/Beni.jpeg",
   },
   {
     name: "Ineza Liza Gaxine",
@@ -80,6 +86,23 @@ const programLeadership: ProgramLead[] = [
     program: "Research & Innovation",
     focus: "Runs frontier labs exploring AGI, climate resilience, and civilization-scale systems.",
     photo: "/images/camp-photo.JPG",
+  },
+];
+
+const otherPrograms: OtherProgram[] = [
+  {
+    title: "SVA",
+    subtitle: "Silicon Valley of Africa",
+    description: "Our silicon level deep tech engineering 30 weeks intensive bootcamp",
+  },
+  {
+    title: "Robotics for good",
+    subtitle: "In partnership with the ITU",
+    description: "We host the robotics for good youth challenge in Rwanda",
+  },
+  {
+    title: "Grow and Innovate summer bootcamp",
+    description: "Where toddlers jump and innovate, a tech immersion summer camp for ages 6-15",
   },
 ];
 
@@ -176,6 +199,22 @@ function ProgramLeadCard({ name, role, program, focus, photo }: ProgramLead) {
   );
 }
 
+function OtherProgramCard({ title, subtitle, description }: OtherProgram) {
+  return (
+    <div className="glass-panel bg-white text-slate-900 p-6 flex flex-col gap-4 hover-glow transition-all duration-500">
+      <div>
+        <h3 className="font-display text-lg font-bold mb-1">{title}</h3>
+        {subtitle ? (
+          <p className="text-neon-blue text-xs font-semibold uppercase tracking-wide mb-1">
+            {subtitle}
+          </p>
+        ) : null}
+      </div>
+      <p className="text-slate-600 text-sm leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
 function SpecialistCard({ name, title, description }: Specialist) {
   return (
     <div className="glass-panel bg-white text-slate-900 p-5 hover-glow transition-all duration-500">
@@ -262,6 +301,9 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {programLeadership.map((lead) => (
               <ProgramLeadCard key={lead.role} {...lead} />
+            ))}
+            {otherPrograms.map((program) => (
+              <OtherProgramCard key={program.title} {...program} />
             ))}
           </div>
         </div>
