@@ -43,13 +43,13 @@ const executiveLeadership: Executive[] = [
     name: "Ismael Kaleeba",
     role: "Chairman of the Board",
     bio: "Leads the vision for SIF as a continent-scale builder movement for Africa's next century.",
-    photo: "/Kaleeba.jpeg",
+    photo: "/images/Kaleeba.jpeg",
   },
    {
     name: "Karangwa Beni Bonheur",
     role: "Managing Director",
     bio: "Tells the SIF story and builds bridges with partners, schools, and communities.",
-    photo: "/Beni.jpeg",
+    photo: "/images/Beni.jpeg",
   },
   {
     name: "Ineza Liza Gaxine",
@@ -61,7 +61,7 @@ const executiveLeadership: Executive[] = [
     name: "Ishimwe Karamage Yves",
     role: "Programs Director",
     bio: "Designs and scales the core initiatives that train future engineers and civilization builders.",
-    photo: "/Yves.jpeg",
+    photo: "/images/Yves.jpeg",
   },
 ];
 
