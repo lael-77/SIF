@@ -55,7 +55,7 @@ const executiveLeadership: Executive[] = [
     name: "Ineza Liza Gaxine",
     role: "Deputy Managing Director",
     bio: "Transforms long-horizon strategy into operational reality across countries and programs.",
-    photo: "",
+    photo: "/images/Gaxine.jpeg",
   },
   {
     name: "Ishimwe Karamage Yves",
