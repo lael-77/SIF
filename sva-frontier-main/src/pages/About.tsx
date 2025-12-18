@@ -65,7 +65,7 @@ const About = () => {
             <div className="glass-panel bg-white text-slate-900 p-8">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-neon-purple/20 to-transparent flex items-center justify-center mb-6 overflow-hidden">
                 <img
-                  src="https://pic.onlinewebfonts.com/thumbnails/icons_713727.svg"
+                  src="https://toppng.com/uploads/preview/ying-yang-tattoo-simple-11552786990po9sxcetns.png"
                   alt="Our Philosophy icon"
                   className="w-full h-full object-contain"
                 />
