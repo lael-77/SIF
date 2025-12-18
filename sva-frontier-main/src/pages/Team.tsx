@@ -61,7 +61,7 @@ const executiveLeadership: Executive[] = [
     name: "Ishimwe Karamage Yves",
     role: "Programs Director",
     bio: "Designs and scales the core initiatives that train future engineers and civilization builders.",
-    photo: "",
+    photo: "/Yves.jpeg",
   },
 ];
 

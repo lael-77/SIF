@@ -1,7 +1,0 @@
-[build]
-  base = "sva-frontier-main"
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "VITE_WEB3FORMS_ACCESS_KEY"
